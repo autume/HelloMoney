@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloMoney</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="accessibility_description">○ 狠戳插件开关\n○ 回到微信聊天\n○ 坐等红包进账\n\n 遇到问题, 欢迎发邮件至1836690807@qq.com反馈</string>
+    <string name="infomation">Author:oden.su \nEmail:1836690807@qq.com\nV1.0.4</string>
+
+</resources>

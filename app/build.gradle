@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+apply plugin:'android-apt'
+def AAVersion='3.3.2'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.dxytech.oden.hongbao"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 4
+        versionName "2016.0131.04"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:recyclerview-v7:21.+'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile files('libs/pgyer_sdk_2.1.2.jar')
+    compile files('libs/activeandroid-3.1-beta.jar')
+    apt "org.androidannotations:androidannotations:$AAVersion"
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName "com.dxytech.oden.annotations"
+    }
+}
